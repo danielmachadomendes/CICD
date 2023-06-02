@@ -24,6 +24,7 @@ jobs:
         snowPassword: ${{ secrets.NOW_PASSWORD }}
         snowSourceInstance: ${{ secrets.NOW_DEV_INSTANCE }}
         appSysID: ${{ secrets.APP_SYS_ID }}
+        appScope: ${{ secrets.APP_SCOPE }}
           
     - name: Create Tag in repository
       if: ${{ success() && steps.sncicd-publish-app.outputs.newVersion }}
